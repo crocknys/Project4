@@ -14,22 +14,25 @@
 <head>
     <jsp:include page="/WEB-INF/Header.jsp"/>
 </head>
-    <jsp:include page="/WEB-INF/navbar.jsp"/>
+<jsp:include page="/WEB-INF/navbar.jsp"/>
 <body>
 <h1>Je suis le menu !</h1>
 
-<tbody>
+<div>
+    <tbody>
     <c:forEach items="${requestScope.list}" var="kiwi">
 
         <tr>
             <td> ${kiwi.word} </td>
             <td> ${kiwi.verb} </td>
             <td> ${kiwi.noun} </td>
-        </br>
+            </br>
         </tr>
 
     </c:forEach>
-</tbody>
+    </tbody>
+</div>
 
 </body>
+
 </html>

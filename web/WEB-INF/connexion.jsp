@@ -9,13 +9,13 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/Header.jsp"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}connexion.css" />
 </head>
-<body>
-<jsp:include page="/WEB-INF/navbar.jsp"/>
-<div class = connexion>
+<body >
+<div id = "connexion">
 <form action="${pageContext.request.contextPath}/connexion" method="post">
-    Si tu souhaites entrer, tu dois être en possession du mot de passe.<br>
-    Attention, si tu te trompe ...
+    Si tu souhaites entrer, tu dois être en possession du mot de passe.<br><br>
+    Attention, si tu te trompes ...
     <br><br>
     <label for="password">Entre le mot de passe </label>
     <input type="password" id="password"  name="password" required placeholder=" ***********"><br><br>

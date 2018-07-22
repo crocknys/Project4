@@ -11,6 +11,23 @@
     <jsp:include page="/WEB-INF/Header.jsp"/>
 </head>
 <body>
+Rentre ta phrase :<br><br>
+<form action="${pageContext.request.contextPath}/create" method="post">
+    <div id="sujetbloc">
+        <label for="sujet">Sujet</label>
+        <input type="text" id="sujet" name="sujet" required placeholder="je, tu ..."><br><br>
+    </div>
+    <div id="verbebloc">
+        <label for="verbe"> Verbe</label>
+        <input type="text" id="verbe" name="verbe" required placeholder="marcher, bouger ..."><br><br>
+    </div>
+    <div id="codbloc">
+        <label for="cod"> Complement</label>
+        <input type="text" id="cod" name="cod" required placeholder="des pates ..."><br><br>
+        <input type="submit" value="Envoyer la phrase">
+    </div>
+
+</form>
 
 </body>
 </html>

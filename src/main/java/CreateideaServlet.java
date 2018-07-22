@@ -10,10 +10,22 @@ import java.io.PrintWriter;
 public class CreateideaServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
+        // recuperer donnée dun formulaire
+        String sujet = (String) request.getParameter("sujet");
+        String verbe = (String) request.getParameter("verbe");
+        String cod = (String) request.getParameter("cod");
+
+        request.setAttribute("sujet", sujet);
+        request.setAttribute("verbe", verbe);
+        request.setAttribute("cod", cod);
+        // a envoyer sur basedonnées
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-        out.println("create");
+        this.getServletContext()
+                .getRequestDispatcher("/WEB-INF/createidea.jsp")
+                .forward(request, response);
+
     }
 }

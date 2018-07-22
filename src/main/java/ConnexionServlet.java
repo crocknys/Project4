@@ -12,13 +12,14 @@ public class ConnexionServlet extends HttpServlet {
 
 
         String password = (String) request.getParameter("password");
-        PrintWriter out = response.getWriter();
 
         if (password.equals("1234")) {
             //a rediriger vers page principale
-            response.sendRedirect("/create");
+            this.getServletContext()
+                    .getRequestDispatcher("/WEB-INF/bigmenu.jsp")
+                    .forward(request, response);
         } else {
-            out.println(" tu t'es trompé, c'est pas bien");
+           response.sendRedirect("/erreur");
         }
     }
 

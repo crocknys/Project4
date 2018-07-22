@@ -9,7 +9,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/Header.jsp"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}connexion.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Css/connexion.css" />
 </head>
 <body >
 <div id = "connexion">

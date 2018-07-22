@@ -4,27 +4,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet(name = "ConnexionServlet", urlPatterns = "/connexion")
-public class ConnexionServlet extends HttpServlet {
+@WebServlet(name = "ErreurServlet", urlPatterns = "/erreur")
+public class ErreurServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
-        String password = (String) request.getParameter("password");
-
-        if (password.equals("1234")) {
-            //a rediriger vers page principale
-            response.sendRedirect("/create");
-        } else {
-           response.sendRedirect("/erreur");
-        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.getServletContext()
-                .getRequestDispatcher("/WEB-INF/connexion.jsp")
+                .getRequestDispatcher("/WEB-INF/erreur.jsp")
                 .forward(request, response);
-
     }
 }

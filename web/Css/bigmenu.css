@@ -1,0 +1,40 @@
+#body{
+    margin: 12px;
+}
+
+#bloc1
+{
+    float: left;
+    width: 50%;
+    height: 50%;
+    background-color: black;
+}
+
+#bloc2
+{
+    float: right;
+    width: 50%;
+    height: 100%;
+    background-color: firebrick;
+}
+
+#bloc3
+{
+    float: left;
+    width: 50%;
+    height: 50%;
+    background-color: skyblue;
+}
+
+#bloc1:hover{
+    background-color: white;
+}
+
+
+#bloc2:hover{
+    background-color: darkred;
+}
+
+#bloc3:hover{
+    background-color: deepskyblue;
+}

@@ -9,9 +9,11 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/Header.jsp"/>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Css/create.css" />
 </head>
 <body>
 Rentre ta phrase :<br><br>
+<div id="container">
 <form action="${pageContext.request.contextPath}/create" method="post">
     <div id="sujetbloc">
         <label for="sujet">Sujet</label>
@@ -28,6 +30,6 @@ Rentre ta phrase :<br><br>
     </div>
 
 </form>
-
+</div>
 </body>
 </html>

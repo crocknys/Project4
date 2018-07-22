@@ -15,7 +15,9 @@ public class ConnexionServlet extends HttpServlet {
 
         if (password.equals("1234")) {
             //a rediriger vers page principale
-            response.sendRedirect("/create");
+            this.getServletContext()
+                    .getRequestDispatcher("/WEB-INF/bigmenu.jsp")
+                    .forward(request, response);
         } else {
            response.sendRedirect("/erreur");
         }

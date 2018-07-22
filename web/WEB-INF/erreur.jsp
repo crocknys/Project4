@@ -9,7 +9,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/Header.jsp"/>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}erreur.css" />
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Css/erreur.css" />
 </head>
 <body>
 <jsp:include page="/WEB-INF/navbar.jsp"/>

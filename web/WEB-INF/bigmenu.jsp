@@ -20,15 +20,15 @@
 <body id = "body">
 
 <div id="bloc1" onclick="location.href='${pageContext.request.contextPath}/generateur';">
-    <p> gogo</p>
+    <p> Générer un idée</p>
 </div>
 
-<div id="bloc2" onclick="location.href='${pageContext.request.contextPath}/creer';">
-    <p> test test test</p>
+<div id="bloc2" onclick="location.href='${pageContext.request.contextPath}/create';">
+    <p> Proposer une idée</p>
 </div>
 
 <div id="bloc3" onclick="location.href='${pageContext.request.contextPath}/principale';">
-    <p> test test test</p>
+    <p> Liste idée</p>
 </div>
 
 </body>

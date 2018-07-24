@@ -11,7 +11,7 @@ import java.util.logging.Handler;
 @WebServlet(name = "CreateideaServlet", urlPatterns = "/create")
 public class CreateideaServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-         int SPLASH_TIME_OUT = 100;
+        int SPLASH_TIME_OUT = 100;
 
         // recuperer donnée dun formulaire
         String sujet = (String) request.getParameter("sujet");
@@ -19,7 +19,8 @@ public class CreateideaServlet extends HttpServlet {
         String cod = (String) request.getParameter("cod");
         PrintWriter out = response.getWriter();
         Integer idWord = null;
-        Integer idSentence =null;
+        Integer idSentence = null;
+
         if (sujet.isEmpty() || verbe.isEmpty() || cod.isEmpty()) {
             out.println("Remplissez tout les champs");
         } else {
@@ -44,8 +45,18 @@ public class CreateideaServlet extends HttpServlet {
                 preparedStatement.executeUpdate();
 
                 preparedStatement = connection
-                        .prepareStatement("INSERT INTO sentence VALUES(null);");
+                        .prepareStatement("INSERT INTO sentence VALUES(null);", Statement.RETURN_GENERATED_KEYS);
                 preparedStatement.executeUpdate();
+
+
+
+               try (ResultSet rs = preparedStatement.getGeneratedKeys()){
+                   if (rs.next()) {
+                       idSentence = rs.getInt(1);
+                   } else {
+                       throw new SQLException("Creating user failed, no ID obtained.");
+                   }
+               }
 
 
                 preparedStatement = connection
@@ -55,25 +66,17 @@ public class CreateideaServlet extends HttpServlet {
                     idWord = resultSet.getInt("id_word");
                 }
 
-                preparedStatement = connection
-                        .prepareStatement("SELECT * FROM sentence ");
-                ResultSet resultSet2 = preparedStatement.executeQuery();
-                while (resultSet.next()) {
-                    idSentence = resultSet2.getInt("id_sentence");
-                }
-
 
                 preparedStatement = connection
                         .prepareStatement("INSERT INTO sentence_word  VALUES(?,?), (?,?), (?,?);");
                 preparedStatement.setInt(1, idWord);
                 preparedStatement.setInt(2, idSentence);
-                preparedStatement.setInt(3, idWord-1);
+                preparedStatement.setInt(3, idWord - 1);
                 preparedStatement.setInt(4, idSentence);
-                preparedStatement.setInt(5, idWord-2);
+                preparedStatement.setInt(5, idWord - 2);
                 preparedStatement.setInt(6, idSentence);
 
                 preparedStatement.executeUpdate();
-
 
 
             } catch (ClassNotFoundException e) {
@@ -86,7 +89,7 @@ public class CreateideaServlet extends HttpServlet {
                 e.printStackTrace();
             }
 
-            out.println("Votre proposition a été enregistré : "+sujet+" "+verbe+" "+cod);
+            out.println("Votre proposition a été enregistré : " + sujet + " " + verbe + " " + cod);
 
 
         }

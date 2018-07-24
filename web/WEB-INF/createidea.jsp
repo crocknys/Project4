@@ -12,9 +12,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Css/create.css" />
 </head>
 <body>
-
-
-
+<jsp:include page="/WEB-INF/navbar.jsp"/>
 <form action="${pageContext.request.contextPath}/create" method="post">
     <div id="presentation" class="col-9 mx-auto" >
         Rentre ta phrase :<br><br>

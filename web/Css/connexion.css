@@ -1,11 +1,11 @@
 
 #connexion {
     background-color: sienna;
-    width: 30%;
-    height: 30%;
+    width: 40%;
+    height: 40%;
     text-align: center;
     margin-top: 20%;
-    margin-left: 60%;
+    margin-left: 50%;
     padding-top: 1%;
     color: aliceblue;
     font-style: italic;
@@ -47,8 +47,10 @@ body {
 @font-face {
     font-family: myFirstFont;
 
+
 }
 
 * {
     font-family: myFirstFont;
+    font-size:x-large;
 }

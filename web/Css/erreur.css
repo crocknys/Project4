@@ -1,7 +1,9 @@
 body {
     background-image: url("http://blog.aa-design.fr/wp-content/uploads/2012/03/dessin_doudou-1024x963.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
+    background-size: 50%;
+
 
 }
 #text {

@@ -13,7 +13,7 @@ form {
 
 #presentation {
     padding-top: 1%;
-    margin-top: 20%;
+    margin-top: 10%;
     color: white;
     text-align: center;
     background-color: sienna;
@@ -78,4 +78,5 @@ form {
 
 * {
     font-family: myFirstFont;
+    font-size: x-large;
 }

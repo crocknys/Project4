@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Css/connexion.css" />
 </head>
 <body >
-<div id = "connexion">
+<div id = "connexion" >
 <form action="${pageContext.request.contextPath}/connexion" method="post">
     Si tu souhaites entrer, tu dois être en possession du mot de passe.<br><br>
     Attention, si tu te trompes ...

@@ -1,24 +1,24 @@
 public class IdeesConstructor {
 
-    private String word;
+    private String sujet;
     private String verb;
-    private String noun;
+    private String cod;
 
-    public IdeesConstructor(String word, String verb, String noun) {
-        this.word = word;
+    public IdeesConstructor(String sujet, String verb, String cod) {
+        this.sujet = sujet;
         this.verb = verb;
-        this.noun = noun;
+        this.cod = cod;
     }
 
     public IdeesConstructor() {
     }
 
-    public String getWord() {
-        return word;
+    public String getSujet() {
+        return sujet;
     }
 
-    public void setWord(String word) {
-        this.word = word;
+    public void setSujet(String sujet) {
+        this.sujet = sujet;
     }
 
     public String getVerb() {
@@ -29,11 +29,11 @@ public class IdeesConstructor {
         this.verb = verb;
     }
 
-    public String getNoun() {
-        return noun;
+    public String getCod() {
+        return cod;
     }
 
-    public void setNoun(String noun) {
-        this.noun = noun;
+    public void setCod(String cod) {
+        this.cod = cod;
     }
 }

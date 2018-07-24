@@ -23,9 +23,9 @@
     <c:forEach items="${requestScope.list}" var="kiwi">
 
         <tr>
-            <td> ${kiwi.word} </td>
+            <td> ${kiwi.sujet} </td>
             <td> ${kiwi.verb} </td>
-            <td> ${kiwi.noun} </td>
+            <td> ${kiwi.cod} </td>
             </br>
         </tr>
 

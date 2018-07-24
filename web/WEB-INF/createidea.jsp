@@ -12,24 +12,34 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Css/create.css" />
 </head>
 <body>
-Rentre ta phrase :<br><br>
-<div id="container">
-<form action="${pageContext.request.contextPath}/create" method="post">
-    <div id="sujetbloc">
-        <label for="sujet">Sujet</label>
-        <input type="text" id="sujet" name="sujet" required placeholder="je, tu ..."><br><br>
-    </div>
-    <div id="verbebloc">
-        <label for="verbe"> Verbe</label>
-        <input type="text" id="verbe" name="verbe" required placeholder="marcher, bouger ..."><br><br>
-    </div>
-    <div id="codbloc">
-        <label for="cod"> Complement</label>
-        <input type="text" id="cod" name="cod" required placeholder="des pates ..."><br><br>
-        <input type="submit" value="Envoyer la phrase">
-    </div>
 
+
+
+<form action="${pageContext.request.contextPath}/create" method="post">
+    <div id="presentation" class="col-9 mx-auto" >
+        Rentre ta phrase :<br><br>
+    </div>
+    <div id="container" class="col-9 mx-auto">
+
+
+
+        <div id="sujetbloc" class="col-4" >
+            <label for="sujet">Sujet</label><br>
+            <input type="text" id="sujet" name="sujet" required placeholder="je, tu ..."><br><br>
+        </div>
+        <div id="verbebloc" class="col-4">
+            <label for="verbe"> Verbe</label><br>
+            <input type="text" id="verbe" name="verbe" required placeholder="marcher, bouger ..."><br><br>
+        </div>
+        <div id="codbloc" class="col-4">
+            <label for="cod"> Complement</label><br>
+            <input type="text" id="cod" name="cod" required placeholder="des pates ..."><br><br>
+
+        </div>
+    </div>
+    <br><br>
+    <input type="submit" value="Envoyer la phrase" class="col-4 mx-auto">
 </form>
-</div>
+
 </body>
 </html>

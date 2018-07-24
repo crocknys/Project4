@@ -23,5 +23,6 @@
     <form method="post" action="/generateur">
         <button type="submit">RELOAD</button>
     </form>
+<img src="https://vignette.wikia.nocookie.net/kungfupanda/images/f/f4/Shifu-LoA.png"/>
 </body>
 </html>

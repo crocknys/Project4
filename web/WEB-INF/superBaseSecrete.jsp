@@ -12,11 +12,14 @@
 <head>
     <jsp:include page="/WEB-INF/Header.jsp"/>
 </head>
-<jsp:include page="/WEB-INF/navbar.jsp"/>
 <body>
-<h1>Je suis la super partie geniale et secrete de crocmou !!!  !</h1>
-<form method="post" action="/generateur">
-<button type="submit">Send</button>
+<jsp:include page="/WEB-INF/navbar.jsp"/>
+
+    <h2>Enpanne d'idée ?</h2></br>
+    <h2>Essayez notre super générateur d'idées aléatoires  :</h2></br>
+    <form method="post" action="/generateur">
+    <button type="submit">Send</button>
+        <div><img src="https://png.pngtree.com/element_origin_min_pic/17/07/23/f216b61acf24cc80935ecb8883896f94.jpg" /></div>
 </form>
 </body>
 </html>

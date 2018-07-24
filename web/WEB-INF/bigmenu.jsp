@@ -20,7 +20,7 @@
 <body id = "body">
 
 <div id="bloc1" onclick="location.href='${pageContext.request.contextPath}/generateur';">
-    <p> Générer un idée</p>
+    <p id="text"> Générer un idée</p>
 </div>
 
 <div id="bloc2" onclick="location.href='${pageContext.request.contextPath}/create';">

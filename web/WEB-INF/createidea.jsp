@@ -12,9 +12,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Css/create.css" />
 </head>
 <body>
-
-
-
+<jsp:include page="/WEB-INF/navbar.jsp"/>
 <form action="${pageContext.request.contextPath}/create" method="post">
     <div id="presentation" class="col-9 mx-auto" >
         Rentre ta phrase :<br><br>
@@ -38,7 +36,7 @@
         </div>
     </div>
     <br><br>
-    <input type="submit" value="Envoyer la phrase" class="col-4 mx-auto">
+    <input id="button" type="submit" value="Envoyer la phrase" class="col-2 mx-auto">
 </form>
 
 </body>

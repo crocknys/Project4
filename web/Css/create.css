@@ -1,0 +1,49 @@
+body{
+    background-image: url("https://cdn.pixabay.com/photo/2017/04/07/01/01/bar-2209813_960_720.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+form{
+    text-align: center;
+
+}
+
+#presentation{
+    padding-top: 1%;
+    margin-top: 20%;
+    color:white;
+    text-align: center;
+    background-color: sienna;
+    border-top-right-radius:20px;
+    border-top-left-radius:  20px;
+
+}
+#container{
+    border-bottom-right-radius:20px;
+    border-bottom-left-radius:  20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    color: white;
+    text-align: center;
+    background-color: sienna;
+
+}
+#sujetbloc{
+
+}
+
+#verbebloc{
+
+
+}
+
+#codbloc{
+
+
+}

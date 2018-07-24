@@ -1,0 +1,21 @@
+
+#connexion {
+    background-color: sienna;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    margin-top: 32%;
+    margin-left: 60%;
+    padding-top: 1%;
+    color: aliceblue;
+    font-style: italic;
+    border-radius: 30px;
+
+}
+
+body {
+    background-image: url("http://s1.1zoom.me/big0/871/336768-svetik.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

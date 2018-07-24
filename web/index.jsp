@@ -5,4 +5,4 @@
   Time: 14:09
   To change this template use File | Settings | File Templates.
 --%>
-<jsp:forward page="WEB-INF/pagePrincipale.jsp"/>
+<jsp:forward page="/connexion"/>

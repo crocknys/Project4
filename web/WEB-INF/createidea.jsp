@@ -20,9 +20,6 @@
         Rentre ta phrase :<br><br>
     </div>
     <div id="container" class="col-9 mx-auto">
-
-
-
         <div id="sujetbloc" class="col-4" >
             <label for="sujet">Sujet</label><br>
             <input type="text" id="sujet" name="sujet" required placeholder="je, tu ..."><br><br>
@@ -34,7 +31,6 @@
         <div id="codbloc" class="col-4">
             <label for="cod"> Complement</label><br>
             <input type="text" id="cod" name="cod" required placeholder="des pates ..."><br><br>
-
         </div>
     </div>
     <br><br>

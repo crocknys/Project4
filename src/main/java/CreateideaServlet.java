@@ -47,7 +47,7 @@ public class CreateideaServlet extends HttpServlet {
                 preparedStatement.setString(1, cod);
                 preparedStatement.setInt(2, 3);
                 preparedStatement.executeUpdate();
-
+                out.println("Votre proposition a été enregistré : "+sujet+" "+verbe+" "+cod);
 
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -58,12 +58,7 @@ public class CreateideaServlet extends HttpServlet {
             } catch (InstantiationException e) {
                 e.printStackTrace();
             }
-
-            out.println("Votre proposition a été enregistré : "+sujet+" "+verbe+" "+cod);
-
-
         }
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

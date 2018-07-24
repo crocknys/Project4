@@ -14,12 +14,12 @@
 <body >
 <div id = "connexion" >
 <form action="${pageContext.request.contextPath}/connexion" method="post">
-    Si tu souhaites entrer, tu dois être en possession du mot de passe.<br><br>
+    Si tu souhaites entrer, tu dois être en possession du mot de passe.<br>
     Attention, si tu te trompes ...
     <br><br>
     <label for="password">Entre le mot de passe </label>
-    <input type="password" id="password"  name="password" required placeholder=" ***********"><br><br>
-    <input type="submit" value ="Entrer dans la taverne">
+    <input class="col-2" type="password" id="password"  name="password" required placeholder=" ****"><br><br>
+    <input   id="button" type="submit" value ="Entrer dans la taverne">
     <br><br>
 </form>
 </div>

@@ -14,11 +14,11 @@
 </head>
 <jsp:include page="/WEB-INF/navbar.jsp"/>
 <body>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Css/generateur.css" />
 
 <h3>Nouvelle idée  :</h3>
 
     <p>${sujet} ${verbe} ${complement}</p>
-
 
     <form method="post" action="/generateur">
         <button type="submit">RELOAD</button>

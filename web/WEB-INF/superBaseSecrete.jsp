@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="fr">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Css/baseSecrete.css"/>
 <head>
     <jsp:include page="/WEB-INF/Header.jsp"/>
 </head>

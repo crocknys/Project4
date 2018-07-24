@@ -15,7 +15,13 @@
 <jsp:include page="/WEB-INF/navbar.jsp"/>
 <body>
 
+<h3>Nouvelle idée  :</h3>
+
     <p>${sujet} ${verbe} ${complement}</p>
 
+
+    <form method="post" action="/generateur">
+        <button type="submit">RELOAD</button>
+    </form>
 </body>
 </html>

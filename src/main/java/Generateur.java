@@ -13,12 +13,7 @@ import java.util.Random;
 @WebServlet(name = "Generateur", urlPatterns = "/generateur")
 public class Generateur extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        this.getServletContext().getRequestDispatcher("/WEB-INF/generateur.jsp").forward(request, response);
 
-
-    }
-
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
             Class driverClass = Class.forName("com.mysql.jdbc.Driver");
             Driver driver = (Driver) driverClass.newInstance();
@@ -53,6 +48,9 @@ public class Generateur extends HttpServlet {
             request.setAttribute("verbe", verbe);
             request.setAttribute("complement", complement);
 
+            this.getServletContext().getRequestDispatcher("/WEB-INF/generateur.jsp").forward(request, response);
+
+
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
@@ -62,6 +60,12 @@ public class Generateur extends HttpServlet {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+
+
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
         this.getServletContext().getRequestDispatcher("/WEB-INF/superBaseSecrete.jsp").forward(request, response);
     }
 }

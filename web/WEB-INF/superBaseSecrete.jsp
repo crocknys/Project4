@@ -14,7 +14,7 @@
 <jsp:include page="/WEB-INF/navbar.jsp"/>
 <body>
 <h1>Je suis la super partie geniale et secrete de crocmou !!!  !</h1>
-<form action="/generateur">
+<form method="post" action="/generateur">
 <button type="submit">Send</button>
 </form>
 </body>

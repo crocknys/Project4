@@ -38,7 +38,7 @@
         </div>
     </div>
     <br><br>
-    <input type="submit" value="Envoyer la phrase" class="col-4 mx-auto">
+    <input id="button" type="submit" value="Envoyer la phrase" class="col-2 mx-auto">
 </form>
 
 </body>

@@ -18,8 +18,8 @@
     Attention, si tu te trompes ...
     <br><br>
     <label for="password">Entre le mot de passe </label>
-    <input type="password" id="password"  name="password" required placeholder=" ***********"><br><br>
-    <input type="submit" value ="Entrer dans la taverne">
+    <input type="password" id="password"  name="password" required placeholder=" ****"><br><br>
+    <input id="button" type="submit" value ="Entrer dans la taverne">
     <br><br>
 </form>
 </div>

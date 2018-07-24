@@ -1,4 +1,4 @@
-body{
+body {
     background-image: url("https://cdn.pixabay.com/photo/2017/04/07/01/01/bar-2209813_960_720.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -6,24 +6,25 @@ body{
 
 }
 
-form{
+form {
     text-align: center;
 
 }
 
-#presentation{
+#presentation {
     padding-top: 1%;
     margin-top: 20%;
-    color:white;
+    color: white;
     text-align: center;
     background-color: sienna;
-    border-top-right-radius:20px;
-    border-top-left-radius:  20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 
 }
-#container{
-    border-bottom-right-radius:20px;
-    border-bottom-left-radius:  20px;
+
+#container {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,16 +35,47 @@ form{
     background-color: sienna;
 
 }
-#sujetbloc{
+
+#button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: sienna;
+    border: none;
+    border-radius: 15px 50px;
+}
+
+#button:hover {
+    background-color: peru
+}
+
+#button:active {
+    background-color: sienna;
+    transform: translateY(4px);
+}
+
+#sujetbloc {
 
 }
 
-#verbebloc{
-
+#verbebloc {
 
 }
 
-#codbloc{
+#codbloc {
 
+}
 
+@font-face {
+    font-family: myFirstFont;
+
+}
+
+* {
+    font-family: myFirstFont;
 }

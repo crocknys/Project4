@@ -18,35 +18,62 @@ public class CreateideaServlet extends HttpServlet {
         String verbe = (String) request.getParameter("verbe");
         String cod = (String) request.getParameter("cod");
         PrintWriter out = response.getWriter();
-
+        Integer idWord = null;
+        Integer idSentence =null;
         if (sujet.isEmpty() || verbe.isEmpty() || cod.isEmpty()) {
             out.println("Remplissez tout les champs");
         } else {
 
             Class driverClass = null;
             try {
+
                 driverClass = Class.forName("com.mysql.jdbc.Driver");
                 Driver driver = (Driver) driverClass.newInstance();
                 DriverManager.registerDriver(driver);
                 Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/projet4", "root", "jecode4wcs");
 
+
                 PreparedStatement preparedStatement = connection
-                        .prepareStatement("INSERT INTO word VALUES(null, ?,?);");
+                        .prepareStatement("INSERT INTO word (word,id_type) VALUES(?,?), (?,?), (?,?);");
                 preparedStatement.setString(1, sujet);
                 preparedStatement.setInt(2, 1);
+                preparedStatement.setString(3, verbe);
+                preparedStatement.setInt(4, 2);
+                preparedStatement.setString(5, cod);
+                preparedStatement.setInt(6, 3);
                 preparedStatement.executeUpdate();
 
                 preparedStatement = connection
-                        .prepareStatement("INSERT INTO word VALUES(null, ?,?);");
-                preparedStatement.setString(1, verbe);
-                preparedStatement.setInt(2, 2);
+                        .prepareStatement("INSERT INTO sentence VALUES(null);");
                 preparedStatement.executeUpdate();
 
+
                 preparedStatement = connection
-                        .prepareStatement("INSERT INTO word VALUES(null, ?,?);");
-                preparedStatement.setString(1, cod);
-                preparedStatement.setInt(2, 3);
+                        .prepareStatement("SELECT * FROM word ");
+                ResultSet resultSet = preparedStatement.executeQuery();
+                while (resultSet.next()) {
+                    idWord = resultSet.getInt("id_word");
+                }
+
+                preparedStatement = connection
+                        .prepareStatement("SELECT * FROM sentence ");
+                ResultSet resultSet2 = preparedStatement.executeQuery();
+                while (resultSet.next()) {
+                    idSentence = resultSet2.getInt("id_sentence");
+                }
+
+
+                preparedStatement = connection
+                        .prepareStatement("INSERT INTO sentence_word  VALUES(?,?), (?,?), (?,?);");
+                preparedStatement.setInt(1, idWord);
+                preparedStatement.setInt(2, idSentence);
+                preparedStatement.setInt(3, idWord-1);
+                preparedStatement.setInt(4, idSentence);
+                preparedStatement.setInt(5, idWord-2);
+                preparedStatement.setInt(6, idSentence);
+
                 preparedStatement.executeUpdate();
+
 
 
             } catch (ClassNotFoundException e) {

@@ -4,12 +4,13 @@
     width: 30%;
     height: 30%;
     text-align: center;
-    margin-top: 32%;
+    margin-top: 20%;
     margin-left: 60%;
     padding-top: 1%;
     color: aliceblue;
     font-style: italic;
-    border-radius: 30px;
+    border-radius: 15px 50px;
+
 
 }
 
@@ -18,4 +19,36 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+
+#button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: peru;
+    border: none;
+
+     border-radius: 15px 50px;
+}
+
+#button:hover {background-color: saddlebrown}
+
+#button:active {
+    background-color: peru;
+    transform: translateY(4px);
+}
+
+@font-face {
+    font-family: myFirstFont;
+
+}
+
+* {
+    font-family: myFirstFont;
 }

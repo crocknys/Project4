@@ -1,5 +1,7 @@
 #body{
     margin: 12px;
+    color: white;
+    text-align: center;
 }
 
 #bloc1
@@ -7,7 +9,11 @@
     float: left;
     width: 50%;
     height: 50%;
-    background-color: black;
+    background-image: url("https://cdn.pixabay.com/photo/2016/08/11/22/12/door-1587023_960_720.jpg");
+    transform: rotateY(180deg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #bloc2
@@ -15,7 +21,10 @@
     float: right;
     width: 50%;
     height: 100%;
-    background-color: firebrick;
+    background-image: url("https://cdn.pixabay.com/photo/2016/08/11/22/12/door-1587023_960_720.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #bloc3
@@ -24,17 +33,37 @@
     width: 50%;
     height: 50%;
     background-color: skyblue;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #bloc1:hover{
-    background-color: white;
+    background-image: url("https://cdn.pixabay.com/photo/2016/08/13/00/11/door-1590024_960_720.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }
 
 
 #bloc2:hover{
-    background-color: darkred;
+    background-image: url("https://cdn.pixabay.com/photo/2016/08/13/00/11/door-1590024_960_720.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #bloc3:hover{
-    background-color: deepskyblue;
+    background-color: cornflowerblue;
+
+}
+
+@font-face {
+    font-family: myFirstFont;
+
+}
+
+* {
+    font-family: myFirstFont;
 }
